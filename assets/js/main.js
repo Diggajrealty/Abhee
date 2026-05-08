@@ -1,5 +1,25 @@
+// Global Modal Functions (Outside DOMContentLoaded for maximum availability)
+window.openEnquiryModal = (projectName) => {
+    const modal = document.getElementById('enquiry-modal');
+    const modalProjectName = document.getElementById('modal-project-name');
+    const modalProjectInput = document.getElementById('modal-project-input');
+
+    if (modalProjectName) modalProjectName.textContent = `Enquire for ${projectName}`;
+    if (modalProjectInput) modalProjectInput.value = projectName;
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeEnquiryModal = () => {
+    const modal = document.getElementById('enquiry-modal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Page Load Overlay & Hero Animation
+    // --- 1. Page Load Overlay & Hero Animation ---
     const loader = document.getElementById('page-loader');
     const triggerHeroAnimation = () => {
         const words = document.querySelectorAll('.hero-editorial .word');
@@ -24,64 +44,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 800);
 
-    // 2. Custom Cursor (Desktop Only)
-    const cursor = document.querySelector('.custom-cursor');
-    if (window.innerWidth > 1024) {
-        let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
+    // --- 3. Lenis Smooth Scroll ---
+    let lenis;
+    try {
+        if (typeof Lenis !== 'undefined') {
+            lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                smooth: true,
+            });
 
-        const animateCursor = () => {
-            cursorX += (mouseX - cursorX) * 0.15;
-            cursorY += (mouseY - cursorY) * 0.15;
-            if (cursor) cursor.style.transform = `translate3d(${cursorX - 8}px, ${cursorY - 8}px, 0)`;
-            requestAnimationFrame(animateCursor);
-        };
-        animateCursor();
-
-        document.querySelectorAll('.clickable, a, button, input, select, textarea').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-        });
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        }
+    } catch (e) {
+        console.warn('Lenis failed:', e);
     }
 
-    // 3. Lenis Smooth Scroll
-    const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        smooth: true,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // 4. Navbar Scroll State
+    // --- 4. Navbar Scroll State ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
+        if (navbar && window.scrollY > 80) {
             navbar.classList.add('nav-scrolled');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('nav-scrolled');
         }
     });
 
-    // 5. Parallax Logic
+    // --- 5. Parallax Logic ---
     const parallaxItems = document.querySelectorAll('.parallax');
-    lenis.on('scroll', () => {
-        parallaxItems.forEach(item => {
-            const speed = item.getAttribute('data-speed') || 0.1;
-            const yPos = -(window.scrollY * speed);
-            item.style.transform = `translateY(${yPos}px)`;
+    if (lenis) {
+        lenis.on('scroll', () => {
+            parallaxItems.forEach(item => {
+                const speed = item.getAttribute('data-speed') || 0.1;
+                const yPos = -(window.scrollY * speed);
+                item.style.transform = `translateY(${yPos}px)`;
+            });
         });
-    });
+    }
 
-    // 6. Mobile Menu
+    // --- 6. Mobile Menu ---
     const menuToggle = document.getElementById('menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
     if (menuToggle && drawer) {
@@ -91,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. CountUp
+    // --- 7. CountUp ---
     const countUp = (element) => {
         const target = parseInt(element.getAttribute('data-target'));
         const suffix = element.getAttribute('data-suffix') || '';
@@ -108,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 20);
     };
 
-    // 8. Intersection Observer
+    // --- 8. Intersection Observer ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -125,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // 9. Filtering
+    // --- 9. Filtering ---
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     filterBtns.forEach(btn => {
@@ -143,20 +149,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 10. FAQ Accordion
+    // --- 10. FAQ Accordion ---
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all items
-            faqItems.forEach(i => i.classList.remove('active'));
-            
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
     });
+
+    // Modal Close logic for clicks outside content
+    const modal = document.getElementById('enquiry-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) window.closeEnquiryModal();
+        });
+    }
 });

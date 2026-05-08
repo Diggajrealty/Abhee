@@ -82,8 +82,7 @@
         <div class="logo-brand reveal-active">ABHEE</div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
+
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -266,6 +265,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">2 - 4.5 BHK</strong>
                             </div>
                         </div>
+                        <a href="abhee-new-dimension.html" class="btn btn-outline clickable" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</a>
                     </div>
                 </div>
                 <div class="project-card ongoing apartments reveal" data-stagger="2">
@@ -286,6 +286,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">1 - 4 BHK</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Aaria')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card ongoing apartments reveal" data-stagger="3">
@@ -306,6 +307,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">2 - 3 BHK</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Celestial City')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
                 <!-- ... others similar ... -->
@@ -327,6 +329,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">1 - 4 BHK</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Silicon Shine')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card ongoing apartments reveal" data-stagger="5">
@@ -347,6 +350,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">Villa Plots</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Natura')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card ongoing apartments reveal" data-stagger="6">
@@ -367,6 +371,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">1 - 4 BHK</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Silicon Shine (Bommasandra)')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card completed villas reveal" data-stagger="7">
@@ -387,6 +392,7 @@
                                 <strong style="color: var(--text-dark); font-size: 0.9rem;">3 BHK Villas</strong>
                             </div>
                         </div>
+                        <button class="btn btn-outline clickable" onclick="openEnquiryModal('Abhee Prakruti Villa')" style="pointer-events: auto !important; position: relative; z-index: 10; margin-top: 20px; width: 100%; font-size: 0.8rem; padding: 12px;">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -696,7 +702,7 @@
             <div class="footer-col footer-about">
                 <div class="logo-brand">ABHEE</div>
                 <p class="footer-tagline">"Turning Land into Landmarks"</p>
-                <p class="copyright">© 2025 Abhee Ventures Pvt. Ltd.<br>All rights reserved.</p>
+                <p class="copyright">© 2026 Abhee Ventures Pvt. Ltd.<br>All rights reserved.</p>
             </div>
 
             <div class="footer-col footer-links">
@@ -736,7 +742,7 @@
             <div class="container bottom-flex">
                 <p class="rera-info">RERA: Details on request. Sanctioned by BDA/BBMP.</p>
                 <div class="legal-links">
-                    <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a>
+                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a>
                 </div>
             </div>
             <div class="container disclaimer-block">
@@ -744,6 +750,50 @@
             </div>
         </div>
     </footer>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEnquiryModal()">&times;</button>
+            <div class="modal-body">
+                <h3 id="modal-project-name" style="font-family: var(--font-display); color: var(--gold-accent); font-size: 1.8rem; margin-bottom: 10px;">Project Enquiry</h3>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Please fill in your details to receive more information.</p>
+                <form name="modal-enquiry" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="hidden" name="project" id="modal-project-input">
+                    <input type="text" name="full_name" placeholder="Full Name" required style="padding: 12px; border: 1px solid var(--border-gold); border-radius: 4px;">
+                    <input type="email" name="email" placeholder="Email Address" required style="padding: 12px; border: 1px solid var(--border-gold); border-radius: 4px;">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" name="country_code" value="+91" readonly style="width: 60px; padding: 12px; border: 1px solid var(--border-gold); border-radius: 4px; background: var(--bg-secondary); text-align: center;">
+                        <input type="tel" name="phone_number" placeholder="Phone Number" required style="flex: 1; padding: 12px; border: 1px solid var(--border-gold); border-radius: 4px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary clickable" style="padding: 15px; margin-top: 10px;">Enquire Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Logic -->
+    <script>
+        function openEnquiryModal(projectName) {
+            console.log('Opening modal for:', projectName);
+            const modal = document.getElementById('enquiry-modal');
+            const modalProjectName = document.getElementById('modal-project-name');
+            const modalProjectInput = document.getElementById('modal-project-input');
+
+            if (modalProjectName) modalProjectName.textContent = "Enquire for " + projectName;
+            if (modalProjectInput) modalProjectInput.value = projectName;
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>

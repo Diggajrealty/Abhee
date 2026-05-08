@@ -3,14 +3,14 @@
 :root {
     --bg-primary: #FFFFFF;
     --bg-secondary: #F9F7F2;
-    --gold-accent: #B38E3F;
-    --gold-light: #D4AF37;
+    --gold-accent: #F26522;
+    --gold-light: #FF8547;
     --text-dark: #1A1A1A;
     --text-off-white: #1A1A1A; /* Reusing name for consistency or mapping to dark */
     --text-muted: #666666;
     --card-bg: #FFFFFF;
-    --border-gold: rgba(179, 142, 63, 0.15);
-    --border-gold-bright: rgba(179, 142, 63, 0.3);
+    --border-gold: rgba(242, 101, 34, 0.15);
+    --border-gold-bright: rgba(242, 101, 34, 0.3);
     
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;

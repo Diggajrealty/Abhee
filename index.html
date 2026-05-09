@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-IN" itemscope itemtype="https://schema.org/WebPage">
 
 <head>
@@ -166,14 +166,14 @@
     <section id="hero" class="hero-section">
         <div class="container hero-grid" style="display:grid; grid-template-columns:1fr 400px; gap:60px; align-items:center;">
             <div class="hero-left">
-                <h1 class="hero-editorial">
+                <h2 class="hero-editorial">
                     <span class="word-wrap" style="display:block; font-size:0.4em; letter-spacing:4px; margin-bottom:15px; color:#fff;"><span class="word">ABHEE VENTURES</span></span>
                     <span class="word-wrap"><span class="word">TURNING</span></span>
                     <span class="word-wrap"><span class="word">LAND</span></span>
                     <br>
                     <span class="word-wrap"><span class="word accent">INTO</span></span>
                     <span class="word-wrap"><span class="word accent">LANDMARKS</span></span>
-                </h1>
+                </h2>
                 <p class="hero-sub animate-on-load">
                     Bangalore's premier real estate developer since 2009. 16+ RERA-approved luxury projects delivered
                     across prime corridors.
@@ -187,9 +187,9 @@
             <!-- Right: Enquiry Form -->
             <div class="animate-on-load" style="background:rgba(255,255,255,0.97); border:1px solid rgba(0,0,0,0.1); padding:35px 30px; box-shadow:0 20px 60px rgba(0,0,0,0.08);">
                 <p style="font-family:'Inter',sans-serif; font-size:0.7rem; text-transform:uppercase; letter-spacing:2px; color:#c8743c; margin-bottom:5px;">Get Expert Guidance</p>
-                <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; color:#1a1a1a; margin-bottom:6px;">Find Your Dream Home</h2>
+                <h1 style="font-family:'Playfair Display',serif; font-size:1.4rem; color:#1a1a1a; margin-bottom:6px;">Find Your Dream Home</h1>
                 <p style="font-family:'Inter',sans-serif; font-size:0.8rem; color:#666; margin-bottom:20px;">Talk to a property advisor today. Zero brokerage, 100% free service.</p>
-                <form onsubmit="handleFormSubmit(event)" novalidate>
+                <form name="hero-enquiry" method="POST" data-netlify="true" action="/success" novalidate>
                     <input type="hidden" name="source" value="Abhee Ventures Hero">
                     <div style="margin-bottom:12px;">
                         <input type="text" name="name" placeholder="Full Name *" required autocomplete="name" aria-label="Full Name" style="width:100%; padding:12px 15px; border:1px solid #ddd; font-family:'Inter',sans-serif; font-size:0.9rem; color:#1a1a1a; background:#f9f9f9; outline:none;">
@@ -303,8 +303,7 @@
                 <p
                     style="color: var(--text-dark); font-size: 0.9rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
                     Request Floor Plan & Brochure</p>
-                <form name="spotlight-brochure" method="POST" data-netlify="true"
-                    style="display: flex; gap: 10px; flex-wrap: wrap;" action="/success">
+                <form name="spotlight-brochure" method="POST" data-netlify="true" action="/success" style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <input type="tel" name="phone" placeholder="Enter Mobile Number" required
                         style="flex: 1; min-width: 200px; padding: 12px 20px; border-radius: 4px; border: 1px solid var(--border-gold); background: #fff; color: var(--text-dark);">
                     <button type="submit" class="btn btn-primary clickable" style="white-space: nowrap;">Download
@@ -724,8 +723,7 @@
                 Experience Luxury in Person</h2>
             <p style="color: #fff; opacity: 0.95; margin-bottom: 35px; font-size: 1.1rem; max-width: 600px;">Schedule a
                 personalized site tour of our premium properties today. Free cab pickup available.</p>
-            <form name="site-visit" method="POST" data-netlify="true"
-                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; max-width: 650px;" action="/success">
+            <form name="site-visit" method="POST" data-netlify="true" action="/success" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; width: 100%; max-width: 650px;">
                 <input type="text" name="name" placeholder="Your Name" required
                     style="flex: 1; min-width: 200px; padding: 16px 20px; border: none; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                 <input type="tel" name="phone" placeholder="Your Phone" required
@@ -1049,8 +1047,7 @@
                 </div>
             </div>
             <div class="contact-right reveal">
-                <form id="enquiry-form" name="main-contact" method="POST" data-netlify="true"
-                    style="display: flex; flex-direction: column; gap: 20px;" action="/success">
+                <form id="enquiry-form" name="main-contact" method="POST" data-netlify="true" action="/success" style="display: flex; flex-direction: column; gap: 20px;">
                     <input type="text" name="full_name" placeholder="Name" required
                         style="background: #fff; border: 1px solid var(--border-gold); padding: 15px; color: var(--text-dark); width: 100%;">
                     <input type="tel" name="phone_number" placeholder="Phone" required
@@ -1153,8 +1150,7 @@
                     Project Enquiry</h3>
                 <p style="color: var(--text-muted); margin-bottom: 25px;">Please fill in your details to receive more
                     information.</p>
-                <form name="modal-enquiry" method="POST" data-netlify="true"
-                    style="display: flex; flex-direction: column; gap: 15px;" action="/success">
+                <form name="modal-enquiry" method="POST" data-netlify="true" action="/success" style="display: flex; flex-direction: column; gap: 15px;">
                     <input type="hidden" name="project" id="modal-project-input">
                     <input type="text" name="full_name" placeholder="Full Name" required
                         style="padding: 12px; border: 1px solid var(--border-gold); border-radius: 4px;">

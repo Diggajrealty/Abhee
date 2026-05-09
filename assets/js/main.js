@@ -9,10 +9,11 @@
     const params = new URLSearchParams(window.location.search);
     const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 
-    // If URL has UTM params, store them (first-touch attribution)
+    // If URL has UTM params, store them (first-touch attribution) along with the full URL
     const freshUTM = {};
     utmKeys.forEach(k => { if (params.get(k)) freshUTM[k] = params.get(k); });
     if (Object.keys(freshUTM).length) {
+        freshUTM['utm_url'] = window.location.href; // Store the full URL with UTMs
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(freshUTM)); } catch (e) {}
     }
 
@@ -32,6 +33,8 @@
                 utm_campaign: storedUTM.utm_campaign || params.get('utm_campaign') || 'none',
                 utm_term:     storedUTM.utm_term     || params.get('utm_term')     || '',
                 utm_content:  storedUTM.utm_content  || params.get('utm_content')  || '',
+                utm_full_url: storedUTM.utm_url      || (window.location.search ? window.location.href : 'none'),
+                source_url:   document.referrer      || 'direct',
                 page_source:  document.title || window.location.pathname,
                 landing_page: window.location.href,
                 website_name: 'abheeprelaunch.com',

@@ -1,4 +1,66 @@
+// ============================================================
+// UTM TRACKER — Auto-injects UTM params + page metadata
+// into every form on the page for lead source attribution.
+// ============================================================
+(function () {
+    const STORAGE_KEY = 'abhee_utm';
+
+    // Parse UTM params from current URL
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+    // If URL has UTM params, store them (first-touch attribution)
+    const freshUTM = {};
+    utmKeys.forEach(k => { if (params.get(k)) freshUTM[k] = params.get(k); });
+    if (Object.keys(freshUTM).length) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(freshUTM)); } catch (e) {}
+    }
+
+    // Read stored UTMs (fallback to empty)
+    let storedUTM = {};
+    try { storedUTM = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) {}
+
+    // Inject hidden fields into all forms
+    function injectUTMFields() {
+        document.querySelectorAll('form').forEach(form => {
+            // Skip if already injected
+            if (form.querySelector('[name="utm_source"]')) return;
+
+            const fields = {
+                utm_source:   storedUTM.utm_source   || params.get('utm_source')   || 'organic',
+                utm_medium:   storedUTM.utm_medium   || params.get('utm_medium')   || 'none',
+                utm_campaign: storedUTM.utm_campaign || params.get('utm_campaign') || 'none',
+                utm_term:     storedUTM.utm_term     || params.get('utm_term')     || '',
+                utm_content:  storedUTM.utm_content  || params.get('utm_content')  || '',
+                page_source:  document.title || window.location.pathname,
+                landing_page: window.location.href,
+                website_name: 'abheeprelaunch.com',
+            };
+
+            Object.entries(fields).forEach(([name, value]) => {
+                const input = document.createElement('input');
+                input.type  = 'hidden';
+                input.name  = name;
+                input.value = value;
+                form.appendChild(input);
+            });
+        });
+    }
+
+    // Run on DOM ready + re-run after any dynamic modals open
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', injectUTMFields);
+    } else {
+        injectUTMFields();
+    }
+
+    // Also re-inject when modals open (they may render forms after load)
+    const origOpen = window.openEnquiryModal;
+    window._reinjectUTM = injectUTMFields;
+})();
+
 // Global Modal Functions (Outside DOMContentLoaded for maximum availability)
+
 window.openEnquiryModal = (projectName) => {
     const modal = document.getElementById('enquiry-modal');
     const modalProjectName = document.getElementById('modal-project-name');
@@ -9,6 +71,8 @@ window.openEnquiryModal = (projectName) => {
     if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        // Re-inject UTM fields into newly visible modal form
+        if (typeof window._reinjectUTM === 'function') window._reinjectUTM();
     }
 };
 

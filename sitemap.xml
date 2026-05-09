@@ -1,31 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- MAIN PAGES -->
     <url>
         <loc>https://abheeprelaunch.com/</loc>
-        <lastmod>2026-05-08</lastmod>
+        <lastmod>2026-05-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://abheeprelaunch.com/privacy-policy.html</loc>
-        <lastmod>2026-05-08</lastmod>
+        <loc>https://abheeprelaunch.com/abhee-new-dimension.html</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- BLOG ARTICLES -->
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/rise-of-luxury-apartments-bangalore/</loc>
+        <lastmod>2026-05-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/sarjapur-road-future-bangalore-real-estate/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/whitefield-silicon-valley-india/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/rera-guidelines-complete-buyer-checklist/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/2bhk-vs-3bhk-best-investment-bangalore/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/home-loan-guide-real-estate-buyers/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/benefits-living-gated-township/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blogs/bangalore-real-estate-forecast-2026/</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- UTILITY PAGES -->
+    <url>
+        <loc>https://abheeprelaunch.com/privacy-policy.html</loc>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/disclaimer.html</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2026-05-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
-    <!-- Blogs -->
-    <url><loc>https://abheeprelaunch.com/blog-1.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-2.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-3.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-4.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-5.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-6.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-7.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/blog-8.html</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
-    <url><loc>https://abheeprelaunch.com/abhee-new-dimension.html</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
+
 </urlset>

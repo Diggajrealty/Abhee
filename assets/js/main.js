@@ -24,6 +24,12 @@
     // Inject hidden fields into all forms
     function injectUTMFields() {
         document.querySelectorAll('form').forEach(form => {
+            // Override any hardcoded 'source' inputs to be the actual URL
+            const existingSource = form.querySelector('input[name="source"]');
+            if (existingSource) {
+                existingSource.value = window.location.href;
+            }
+
             // Skip if already injected
             if (form.querySelector('[name="utm_source"]')) return;
 

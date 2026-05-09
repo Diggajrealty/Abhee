@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const html = fs.readFileSync('index.html', 'utf8');
 
 // The hero section starts with `<section class="hero-section"`
@@ -72,7 +72,7 @@ for(let b of blogs) {
     ` + footer;
     
     // Replace the title to match the blog
-    pageHtml = pageHtml.replace('<title>Abhee Ventures | Trusted Real Estate Developer in Bangalore Since 2009</title>', `<title>${b.title} | Abhee Ventures</title>`);
+    pageHtml = pageHtml.replace('<title>Abhee | Trusted Real Estate Developer in Bangalore Since 2009</title>', `<title>${b.title} | Abhee</title>`);
     
     fs.writeFileSync(b.filename, pageHtml);
     console.log('Created ' + b.filename);

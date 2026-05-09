@@ -16,7 +16,7 @@
     --font-body: 'Inter', sans-serif;
     --font-accent: 'Cormorant Garamond', serif;
 
-    --section-padding: 120px 5%;
+    --section-padding: 80px 5%;
     --anim-bezier: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --anim-duration: 0.7s;
 }
@@ -107,11 +107,12 @@ ul { list-style: none; }
     position: fixed;
     top: 0;
     right: 0;
-    width: 350px;
+    width: 80%;
+    max-width: 350px;
     height: 100%;
     background: var(--bg-primary);
     z-index: 2000;
-    padding: 120px 50px;
+    padding: 80px 40px;
     transform: translateX(100%);
     visibility: hidden;
     transition: transform 0.6s var(--anim-bezier), visibility 0.6s;
@@ -137,6 +138,23 @@ ul { list-style: none; }
 .mobile-menu-btn { display: none; flex-direction: column; gap: 7px; z-index: 2001; }
 .mobile-menu-btn span { width: 30px; height: 1px; background: var(--gold-accent); transition: 0.3s ease; }
 
+/* Drawer Close Button */
+.drawer-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.3s;
+}
+.drawer-close:hover {
+    color: var(--gold-accent);
+}
+
 /* 4. Hero Section */
 .hero-section {
     position: relative;
@@ -145,7 +163,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: url('../hero_abhee.png') no-repeat center center/cover;
     padding-top: 120px;
 }
 
@@ -153,7 +171,7 @@ ul { list-style: none; }
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.9) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.6) 55%, rgba(255,255,255,0.15) 100%);
     z-index: 1;
 }
 
@@ -167,7 +185,7 @@ ul { list-style: none; }
     transition: transform 0.8s var(--anim-bezier);
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(48px, 8vw, 110px);
+    font-size: clamp(36px, 6vw, 85px);
     color: var(--text-dark);
     letter-spacing: -0.03em;
     line-height: 1;
@@ -179,10 +197,10 @@ ul { list-style: none; }
 
 .scroll-indicator {
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -191,6 +209,10 @@ ul { list-style: none; }
     font-size: 0.7rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+}
+
+.scroll-indicator span {
+    margin-right: -0.3em; /* Offsets letter-spacing to perfectly center */
 }
 
 .scroll-line { width: 1px; height: 60px; background: rgba(201,168,76,0.2); position: relative; overflow: hidden; }
@@ -294,10 +316,10 @@ ul { list-style: none; }
 
 .pull-quote { font-family: var(--font-accent); font-size: 3.5rem; color: var(--gold-accent); font-style: italic; line-height: 1.2; margin-bottom: 40px; }
 
-.image-stack { position: relative; height: 600px; }
-.image-stack img { border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
-.img-1 { position: absolute; top: 0; right: 0; z-index: 1; }
-.img-2 { position: absolute; bottom: 0; left: 0; z-index: 2; border: 10px solid var(--bg-primary); }
+.image-stack { position: relative; height: 600px; width: 100%; }
+.image-stack img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+.img-1 { position: absolute; top: 0; right: 0; width: 80%; z-index: 1; }
+.img-2 { position: absolute; bottom: 0; left: 0; width: 70%; z-index: 2; border: 10px solid var(--bg-primary); }
 
 /* 7. Featured Project */
 .featured-spotlight {
@@ -487,10 +509,22 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+    :root { --section-padding: 60px 5%; }
     .about-grid-new, .projects-masonry, .trust-pillars-grid, .footer-grid { grid-template-columns: 1fr; }
+    .image-stack { height: 400px; margin-top: 40px; }
+    .stats-strip { padding: 40px 0; }
+    .stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 20px; text-align: center; }
+    .stat-num { font-size: 2.2rem; }
+    .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
     .footer-links { flex-direction: column; gap: 40px; }
     .bottom-flex { flex-direction: column; text-align: center; gap: 30px; }
     .pull-quote { font-size: 2.2rem; }
+    
+    .hero-section { min-height: 550px; padding-top: 60px; }
+    .hero-editorial { margin-bottom: 20px; }
+    .hero-sub { margin-bottom: 25px; }
+    .hero-btns { flex-direction: column; gap: 15px; width: 100%; max-width: 280px; margin: 0 auto; }
+    .hero-btns .btn { width: 100%; padding: 15px; }
 }
 
 /* 10. Modal Styles */

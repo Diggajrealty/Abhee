@@ -90,10 +90,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. Mobile Menu ---
     const menuToggle = document.getElementById('menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
+    const drawerCloseBtn = document.getElementById('drawer-close');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
     if (menuToggle && drawer) {
+        const closeDrawer = () => {
+            drawer.classList.remove('active');
+            menuToggle.classList.remove('active');
+        };
+
         menuToggle.addEventListener('click', () => {
             drawer.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        if (drawerCloseBtn) {
+            drawerCloseBtn.addEventListener('click', closeDrawer);
+        }
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeDrawer);
         });
     }
 

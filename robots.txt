@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /success.html
+Disallow: /build_blogs.js
+Disallow: /blog_articles.md
+Disallow: /seo_plan_abhee_new_dimension.md
+
 Sitemap: https://abheeprelaunch.com/sitemap.xml

@@ -117,16 +117,16 @@ ul { list-style: none; }
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
-    max-width: 350px;
+    width: 85%;
+    max-width: 320px;
     height: 100%;
     background: var(--bg-primary);
     z-index: 2000;
-    padding: 80px 40px;
-    transform: translateX(100%);
+    padding: 100px 40px;
+    transform: translateX(101%);
     visibility: hidden;
     transition: transform 0.6s var(--anim-bezier), visibility 0.6s;
-    box-shadow: -20px 0 60px rgba(0,0,0,0.05);
+    box-shadow: -20px 0 60px rgba(0,0,0,0.1);
     border-left: 1px solid var(--border-gold);
 }
 
@@ -135,27 +135,38 @@ ul { list-style: none; }
     visibility: visible;
 }
 
-.mobile-nav-links { display: flex; flex-direction: column; gap: 35px; }
-.mobile-nav-links a { 
+.mobile-nav-links { display: flex; flex-direction: column; gap: 28px; }
+.mobile-nav-links a:not(.btn) { 
     font-family: var(--font-display); 
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     color: var(--text-dark); 
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 .mobile-nav-links a:hover { color: var(--gold-accent); }
 
+/* Enquire Now button in drawer */
+.mobile-nav-links .btn {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    padding: 16px 20px;
+    letter-spacing: 0.15em;
+}
+
 /* Mobile Toggle */
-.mobile-menu-btn { display: none; flex-direction: column; gap: 7px; z-index: 2001; }
-.mobile-menu-btn span { width: 30px; height: 1px; background: var(--gold-accent); transition: 0.3s ease; }
+.mobile-menu-btn { display: none; flex-direction: column; gap: 7px; z-index: 2001; cursor: pointer; }
+.mobile-menu-btn span { width: 28px; height: 1px; background: var(--gold-accent); transition: 0.3s ease; }
 
 /* Drawer Close Button */
 .drawer-close {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 30px;
+    right: 30px;
     background: transparent;
     border: none;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--text-dark);
     cursor: pointer;
     line-height: 1;

@@ -185,7 +185,7 @@ ul { list-style: none; }
     z-index: 1;
 }
 
-.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; }
+.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
 
 .hero-editorial { margin-bottom: 30px; }
 .word-wrap { overflow: hidden; display: inline-block; vertical-align: bottom; }
@@ -532,11 +532,17 @@ ul { list-style: none; }
     .bottom-flex { flex-direction: column; text-align: center; gap: 30px; }
     .pull-quote { font-size: 2.2rem; }
     
-    .hero-section { min-height: 550px; padding-top: 60px; }
+    .hero-section { height: auto; min-height: 100vh; padding: 100px 0 60px; }
     .hero-editorial { margin-bottom: 20px; }
-    .hero-sub { margin-bottom: 25px; }
+    .hero-sub { margin-bottom: 25px; font-size: 1rem; }
     .hero-btns { flex-direction: column; gap: 15px; width: 100%; max-width: 280px; margin: 0 auto; }
     .hero-btns .btn { width: 100%; padding: 15px; }
+    
+    /* Global Form Mobile Adjustments */
+    .hero-grid div[style*="padding:35px 30px"],
+    div[style*="padding: 40px"] { 
+        padding: 25px 20px !important; 
+    }
 }
 
 /* 10. Modal Styles */

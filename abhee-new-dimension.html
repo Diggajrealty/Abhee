@@ -261,7 +261,12 @@
             padding: 35px 30px;
             backdrop-filter: blur(10px);
         }
-        @media(max-width: 1024px) { .hero-grid-inner { grid-template-columns: 1fr; } .hero-form-panel { display: none; } }
+        @media(max-width: 1024px) { 
+            .hero-grid-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; } 
+            .hero-form-panel { display: block; margin: 40px auto 0; max-width: 450px; text-align: left; }
+            .hero-btns { justify-content: center; }
+            .hero-badges { justify-content: center; }
+        }
         .hero-badges { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; font-family: var(--font-ui); }
         .badge { padding: 6px 15px; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; border-radius: 50px; }
         .badge.filled { background: var(--gold); color: var(--bg-dark); }

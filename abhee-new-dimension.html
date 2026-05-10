@@ -419,17 +419,24 @@
         .modal-box h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 10px; }
         .modal-box p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px; }
 
-        /* RESPONSIVE */
         @media (max-width: 1024px) {
             .hero-stats { position: relative; background: transparent; border: none; padding-bottom: 40px; }
             .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .stat-item { border: 1px solid rgba(166,124,0,0.2); background: rgba(255,255,255,0.9); }
             .hero-graphic { display: none; }
-            .hero { height: auto; padding-top: 150px; }
-            .overview-grid, .loc-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero { height: auto; min-height: 100vh; padding: 120px 0 60px; }
+            .hero-grid-inner { grid-template-columns: 1fr; gap: 50px; height: auto; }
+            .hero-content-panel { text-align: center; }
+            .hero-btns { flex-direction: column !important; align-items: center; gap: 15px; width: 100%; max-width: 320px; margin: 0 auto; }
+            .hero-btns .btn { width: 100%; }
+            .overview-grid, .loc-grid, .contact-grid, .responsive-grid-4, .responsive-grid-3, .responsive-grid-2, .fact-grid, .gallery-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+            .gallery-grid { grid-auto-rows: 220px !important; }
             .why-grid { grid-template-columns: repeat(2, 1fr); }
             .test-grid { grid-template-columns: 1fr; }
             .ov-img-wrapper { margin-top: 40px; }
+            .text-muted, .text-body { max-width: 100% !important; text-align: left; }
+            .text-center .text-muted { text-align: center; }
+            .developer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
         }
         @media (max-width: 768px) {
             :root { --padding-section: 60px 5%; }
@@ -1045,7 +1052,7 @@
                 <h2 class="h-section">The <span class="gold">Neighbourhood</span> Around Abhee New Dimension</h2>
                 <p class="text-muted" style="max-width:700px; margin:0 auto;">Abhee Codename New Dimension is located on Gunjur Road, Varthur–Sarjapur, placing residents at the heart of East Bangalore's most vibrant and well-serviced neighbourhood ecosystem.</p>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:25px;" class="reveal stagger-1">
+            <div class="responsive-grid-4 reveal stagger-1" style="display:grid; grid-template-columns:repeat(4,1fr); gap:25px;">
                 <div style="padding:25px; background:var(--bg-dark); border:1px solid rgba(166,124,0,0.15);">
                     <h3 style="font-family:var(--font-ui); font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; color:var(--gold); margin-bottom:18px;">🎓 Top Schools Nearby</h3>
                     <ul style="font-family:var(--font-ui); font-size:0.85rem; color:var(--text-muted); line-height:2.2; list-style:none; padding:0;">
@@ -1099,7 +1106,7 @@
                 <h2 class="h-section">What Early Buyers Are <span class="gold">Saying</span></h2>
                 <p class="text-muted" style="max-width:600px; margin:0 auto;">Hundreds of families have already reserved their expression of interest for Abhee New Dimension. Here is why they chose to invest early.</p>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
+            <div class="responsive-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px;">
                 <div class="reveal stagger-1" style="padding:35px; background:var(--bg-panel); border:1px solid rgba(166,124,0,0.2);">
                     <div style="font-size:2.5rem; color:var(--gold); line-height:1; margin-bottom:15px;">"</div>
                     <p style="font-family:var(--font-ui); font-size:0.9rem; color:var(--text-muted); line-height:1.8; margin-bottom:20px;">I have watched Sarjapur Road prices double in the last 7 years. When I heard Abhee was building a 45-acre Scotland-themed township right next to Greenwood High, I booked immediately. The scale of this project is unlike anything else on this road. I am certain this will be the most prestigious address in East Bangalore by 2028.</p>
@@ -1131,7 +1138,7 @@
     <!-- ABOUT THE DEVELOPER -->
     <section style="padding: var(--padding-section); background: var(--bg-panel);" id="developer" aria-label="About Abhee developer Bangalore">
         <div class="container">
-            <div style="display:grid; grid-template-columns:5fr 4fr; gap:70px; align-items:start;" class="reveal">
+            <div class="developer-grid reveal" style="display:grid; grid-template-columns:5fr 4fr; gap:70px; align-items:start;">
                 <div>
                     <span class="label">The Developer</span>
                     <h2 class="h-section">About <span class="gold">Abhee</span> — Turning Land into Landmarks Since 2009</h2>

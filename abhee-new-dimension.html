@@ -51,6 +51,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
+    <!-- GLOBAL STYLES -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- SCHEMA.ORG -->
     <script type="application/ld+json">
     {
@@ -217,28 +220,6 @@
         .stagger-1 { transition-delay: 0.1s; }
         .stagger-2 { transition-delay: 0.2s; }
         .stagger-3 { transition-delay: 0.3s; }
-
-        /* 1. STICKY NAV */
-        .navbar {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
-            transition: var(--transition);
-        }
-        .navbar.scrolled { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; border-bottom: 1px solid rgba(166,124,0,0.2); }
-        .nav-logo a { display: flex; flex-direction: column; }
-        .logo-main { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase;}
-        .logo-sub { font-family: var(--font-ui); font-size: 0.6rem; letter-spacing: 4px; color: var(--text-main); text-transform: uppercase; }
-        
-        .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { font-family: var(--font-ui); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; color: var(--text-main); }
-        .nav-links a:hover { color: var(--gold); }
-        
-        .nav-actions { display: flex; gap: 20px; align-items: center; }
-        .nav-phone { font-family: var(--font-ui); font-size: 0.9rem; color: var(--text-main); }
-        .nav-phone:hover { color: var(--gold); }
-        
-        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .hamburger span { width: 25px; height: 2px; background: var(--gold); transition: 0.3s; }
 
         /* 2. HERO SECTION */
         .hero {
@@ -440,8 +421,6 @@
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .nav-links, .nav-actions { display: none; }
-            .hamburger { display: flex; }
             .hero-stats { position: relative; background: transparent; border: none; padding-bottom: 40px; }
             .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .stat-item { border: 1px solid rgba(166,124,0,0.2); background: rgba(255,255,255,0.9); }
@@ -470,27 +449,44 @@
 
     <!-- 1. STICKY NAV -->
     <nav class="navbar" id="navbar">
-        <div class="nav-logo">
-            <a href="https://abheeprelaunch.com">
-                <span class="logo-main">Abhee</span>
-                <span class="logo-sub">New Dimension</span>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-group clickable">
+                <div class="logo-brand">ABHEE</div>
+                <div class="logo-subtext">NEW DIMENSION</div>
             </a>
+
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#configurations">Configurations</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="tel:+919886890004" class="btn btn-outline clickable">+91 98868 90004</a>
+            </div>
+
+            <div class="mobile-menu-btn clickable" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <ul class="nav-links">
+    </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <button id="drawer-close" class="drawer-close" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-links">
             <li><a href="#overview">Overview</a></li>
             <li><a href="#configurations">Configurations</a></li>
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><button class="btn btn-primary" onclick="openModal('Enquire Now')">Enquire Now</button></li>
         </ul>
-        <div class="nav-actions">
-            <a href="tel:+919886890004" class="nav-phone">+91 98868 90004</a>
-            <button class="btn btn-gold" onclick="openModal('Enquire Now')">Enquire Now</button>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-    </nav>
+    </div>
 
     <!-- 2. HERO -->
     <section class="hero" id="home" aria-label="Abhee Codename New Dimension Hero Section">
@@ -1463,35 +1459,8 @@
     </div>
 
     <!-- JAVASCRIPT -->
+    <script src="assets/js/main.js"></script>
     <script>
-        // 1. Sticky Nav
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-
-        // 2. Mobile Menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        hamburger.addEventListener('click', () => {
-            const isVisible = navLinks.style.display === 'flex';
-            if (isVisible) {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'rgba(255,255,255,0.95)';
-                navLinks.style.padding = '20px 0';
-                navLinks.style.borderBottom = '1px solid rgba(166,124,0,0.2)';
-            }
-        });
-
         // 3. Intersection Observer (Reveal animations)
         const revealElements = document.querySelectorAll('.reveal');
         const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };

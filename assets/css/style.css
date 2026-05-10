@@ -649,3 +649,15 @@ html, body { overflow-x: hidden; width: 100%; }
     box-shadow: 0 0 0 3px rgba(242, 101, 34, 0.1);
 }
 
+/* Global Responsive Grid Utilities */
+.responsive-grid-2, .responsive-grid-3, .responsive-grid-4 { display: grid; gap: 30px; }
+.responsive-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.responsive-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.responsive-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+    .responsive-grid-2, .responsive-grid-3, .responsive-grid-4 { 
+        grid-template-columns: 1fr !important; 
+        gap: 30px !important;
+    }
+}

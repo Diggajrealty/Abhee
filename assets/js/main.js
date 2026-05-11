@@ -34,12 +34,12 @@
             if (form.querySelector('[name="utm_source"]')) return;
 
             const fields = {
-                utm_source:   storedUTM.utm_source   || params.get('utm_source')   || 'organic',
+                utm_source:   storedUTM.utm_source   || params.get('utm_source')   || document.referrer || 'organic',
                 utm_medium:   storedUTM.utm_medium   || params.get('utm_medium')   || 'none',
                 utm_campaign: storedUTM.utm_campaign || params.get('utm_campaign') || 'none',
                 utm_term:     storedUTM.utm_term     || params.get('utm_term')     || '',
                 utm_content:  storedUTM.utm_content  || params.get('utm_content')  || '',
-                utm_full_url: storedUTM.utm_url      || (window.location.search ? window.location.href : 'none'),
+                utm_full_url: storedUTM.utm_url      || window.location.href,
                 source_url:   document.referrer      || 'direct',
                 page_source:  document.title || window.location.pathname,
                 landing_page: window.location.href,

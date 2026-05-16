@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- MAIN PAGES -->
+    
     <url>
         <loc>https://abheeprelaunch.com/</loc>
         <lastmod>2026-05-11</lastmod>
@@ -9,13 +9,13 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://abheeprelaunch.com/abhee-new-dimension.html</loc>
+        <loc>https://abheeprelaunch.com/abhee-new-dimension</loc>
         <lastmod>2026-05-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- BLOG ARTICLES -->
+    
     <url>
         <loc>https://abheeprelaunch.com/blogs/rise-of-luxury-apartments-bangalore/</loc>
         <lastmod>2026-05-11</lastmod>
@@ -83,7 +83,7 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- UTILITY PAGES -->
+    
     <url>
         <loc>https://abheeprelaunch.com/privacy-policy.html</loc>
         <lastmod>2026-05-11</lastmod>
@@ -97,4 +97,4 @@
         <priority>0.3</priority>
     </url>
 
-</urlset>
+<url><loc>https://abheeprelaunch.com/abhee-aaria</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/abhee-celestial-city</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/abhee-silicon-shine</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/blog/</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/abhee-new-dimension-review-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/varthur-sarjapur-road-real-estate-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/pre-launch-apartment-buying-guide-bangalore-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url></urlset>

@@ -1,100 +1,149 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    
+    <!-- ============================================================ -->
+    <!-- CORE PAGES                                                    -->
+    <!-- ============================================================ -->
     <url>
         <loc>https://abheeprelaunch.com/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- ============================================================ -->
+    <!-- PROJECT LANDING PAGES                                         -->
+    <!-- ============================================================ -->
     <url>
-        <loc>https://abheeprelaunch.com/abhee-new-dimension</loc>
-        <lastmod>2026-05-11</lastmod>
+        <loc>https://abheeprelaunch.com/abhee-codename-new-dimension</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/abhee-aaria</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/abhee-celestial-city</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/abhee-silicon-shine</loc>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    
+    <!-- ============================================================ -->
+    <!-- BLOG HUB                                                      -->
+    <!-- ============================================================ -->
+    <url>
+        <loc>https://abheeprelaunch.com/blog/</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Articles – /blog/ (Premium Editorial Articles) -->
+    <url>
+        <loc>https://abheeprelaunch.com/blog/abhee-new-dimension-review-2026</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blog/varthur-sarjapur-road-real-estate-2026</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://abheeprelaunch.com/blog/pre-launch-apartment-buying-guide-bangalore-2026</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ============================================================ -->
+    <!-- BLOG ARTICLES – /blogs/ (SEO Articles)                        -->
+    <!-- NOTE: varthur-sarjapur-road-investment-guide-2025 and        -->
+    <!-- abhee-codename-new-dimension-buyers-guide are set to noindex  -->
+    <!-- in their HTML to prevent duplication with /blog/ articles.    -->
+    <!-- ============================================================ -->
     <url>
         <loc>https://abheeprelaunch.com/blogs/rise-of-luxury-apartments-bangalore/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/sarjapur-road-future-bangalore-real-estate/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/whitefield-silicon-valley-india/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/rera-guidelines-complete-buyer-checklist/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/2bhk-vs-3bhk-best-investment-bangalore/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/home-loan-guide-real-estate-buyers/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/benefits-living-gated-township/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/bangalore-real-estate-forecast-2026/</loc>
-        <lastmod>2026-05-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://abheeprelaunch.com/blogs/varthur-sarjapur-road-investment-guide-2025/</loc>
-        <lastmod>2026-05-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://abheeprelaunch.com/blogs/abhee-codename-new-dimension-buyers-guide/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://abheeprelaunch.com/blogs/scotland-themed-townships-bangalore-luxury-market/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    
+    <!-- ============================================================ -->
+    <!-- LEGAL PAGES                                                   -->
+    <!-- ============================================================ -->
     <url>
-        <loc>https://abheeprelaunch.com/privacy-policy.html</loc>
-        <lastmod>2026-05-11</lastmod>
+        <loc>https://abheeprelaunch.com/privacy-policy</loc>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://abheeprelaunch.com/disclaimer.html</loc>
-        <lastmod>2026-05-11</lastmod>
+        <loc>https://abheeprelaunch.com/disclaimer</loc>
+        <lastmod>2026-05-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
-<url><loc>https://abheeprelaunch.com/abhee-aaria</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/abhee-celestial-city</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/abhee-silicon-shine</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url><loc>https://abheeprelaunch.com/blog/</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/abhee-new-dimension-review-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/varthur-sarjapur-road-real-estate-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url><url><loc>https://abheeprelaunch.com/blog/pre-launch-apartment-buying-guide-bangalore-2026</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url></urlset>
+</urlset>

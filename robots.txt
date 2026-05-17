@@ -2,7 +2,19 @@ User-agent: *
 Allow: /
 Disallow: /success.html
 Disallow: /build_blogs.js
+Disallow: /build_blogs.py
 Disallow: /blog_articles.md
 Disallow: /seo_plan_abhee_new_dimension.md
+Disallow: /audit.py
+Disallow: /audit_results.json
+Disallow: /generate.py
+Disallow: /fix.py
+Disallow: /fix_hero.py
+Disallow: /fix_index.py
+Disallow: /fix_links.py
+Disallow: /fix_seo.py
+Disallow: /patch_generated.py
+Disallow: /patch_logo.py
+Disallow: /copy.py
 
 Sitemap: https://abheeprelaunch.com/sitemap.xml

@@ -1,0 +1,6 @@
+# Redirect old URLs to new URL
+/abhee-new-dimension          /abhee-codename-new-dimension    301!
+/abhee-new-dimension.html     /abhee-codename-new-dimension    301!
+
+# Internal rewrite: map the new URL to the physical file
+/abhee-codename-new-dimension /abhee-new-dimension.html        200

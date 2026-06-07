@@ -140,13 +140,13 @@
     <!-- LEGAL PAGES                                                   -->
     <!-- ============================================================ -->
     <url>
-        <loc>https://abheeprelaunch.com/privacy-policy</loc>
+        <loc>https://abheeprelaunch.com/privacy-policy.html</loc>
         <lastmod>2026-05-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://abheeprelaunch.com/disclaimer</loc>
+        <loc>https://abheeprelaunch.com/disclaimer.html</loc>
         <lastmod>2026-05-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>

@@ -121,14 +121,16 @@
            ═══════════════════════════════════════ */
         :root {
             --gold: #A67C00;
-            --gold-light: #C9A84C;
-            --gold-dim: rgba(166, 124, 0, 0.15);
-            --bg-dark: #0E0E10;
-            --bg-panel: #141417;
-            --bg-card: #1A1A1F;
-            --text-main: #F0EDE6;
-            --text-muted: #9A9590;
-            --border-gold: rgba(166, 124, 0, 0.25);
+            --gold-light: #8B6200;
+            --gold-dim: rgba(166, 124, 0, 0.08);
+            --bg-dark: #FFFFFF;
+            --bg-panel: #FAF8F4;
+            --bg-card: #F2EEE6;
+            --text-main: #1A1818;
+            --text-muted: #6B6560;
+            --border-gold: rgba(166, 124, 0, 0.22);
+            --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 24px rgba(0,0,0,0.09);
             --font-display: 'Cormorant Garamond', serif;
             --font-ui: 'Jost', sans-serif;
             --font-accent: 'Cinzel', serif;
@@ -198,10 +200,10 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-        .btn-gold { background: var(--gold); color: var(--bg-dark); }
-        .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
-        .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold-light); }
-        .btn-outline:hover { background: var(--gold); color: var(--bg-dark); }
+        .btn-gold { background: var(--gold); color: #FFFFFF; }
+        .btn-gold:hover { background: #8B6200; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-outline { background: transparent; border: 1.5px solid var(--gold); color: var(--gold); }
+        .btn-outline:hover { background: var(--gold); color: #FFFFFF; }
 
         /* TICKER */
         .ticker-wrap {
@@ -220,7 +222,7 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--bg-dark);
+            color: #FFFFFF;
             padding: 0 40px;
         }
         .ticker-track span::before { content: "◆  "; }
@@ -231,10 +233,11 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 999;
-            background: rgba(14, 14, 16, 0.92);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border-bottom: 1px solid var(--border-gold);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.07);
             padding: 0 30px;
             height: 70px;
             display: flex;
@@ -262,10 +265,10 @@
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: #555250;
             transition: color 0.2s;
         }
-        .nav-links a:hover { color: var(--gold-light); }
+        .nav-links a:hover { color: var(--gold); }
         .nav-cta { display: flex; align-items: center; gap: 15px; }
         .nav-phone {
             font-family: var(--font-ui);
@@ -349,8 +352,9 @@
             top: 50%;
             transform: translateY(-50%);
             width: 380px;
-            background: var(--bg-panel);
+            background: rgba(255,255,255,0.98);
             border: 1px solid var(--border-gold);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.18);
             padding: 40px;
             z-index: 3;
         }
@@ -367,7 +371,7 @@
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 600;
-            color: var(--text-main);
+            color: #1A1818;
             margin-bottom: 6px;
             line-height: 1.2;
         }
@@ -379,19 +383,19 @@
         .form-row { margin-bottom: 12px; }
         .form-input {
             width: 100%;
-            background: var(--bg-dark);
-            border: 1px solid var(--border-gold);
+            background: #FFFFFF;
+            border: 1.5px solid #E0D8CC;
             padding: 13px 16px;
             font-family: var(--font-ui);
             font-size: 0.88rem;
-            color: var(--text-main);
+            color: #1A1818;
             outline: none;
             transition: border-color 0.2s;
             appearance: none;
         }
-        .form-input:focus { border-color: var(--gold); }
-        .form-input::placeholder { color: var(--text-muted); }
-        .form-input option { background: var(--bg-dark); color: var(--text-main); }
+        .form-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(166,124,0,0.08); }
+        .form-input::placeholder { color: #AAA5A0; }
+        .form-input option { background: #FFFFFF; color: #1A1818; }
         .form-privacy {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -501,8 +505,9 @@
             padding: 1px;
         }
         .fact-item {
-            background: var(--bg-dark);
+            background: #FFFFFF;
             padding: 18px 22px;
+            box-shadow: var(--shadow-sm);
         }
         .fact-item strong {
             display: block;
@@ -528,12 +533,13 @@
             margin-top: 50px;
         }
         .config-card {
-            background: var(--bg-panel);
+            background: #FFFFFF;
             padding: 35px;
-            transition: background 0.3s;
+            transition: all 0.3s;
             position: relative;
+            box-shadow: var(--shadow-sm);
         }
-        .config-card:hover { background: var(--bg-card); }
+        .config-card:hover { background: var(--bg-panel); box-shadow: var(--shadow-md); transform: translateY(-3px); }
         .config-badge {
             display: inline-block;
             font-family: var(--font-ui);
@@ -614,11 +620,12 @@
             font-size: 0.85rem;
             color: var(--text-muted);
             padding: 10px 14px;
-            background: var(--bg-dark);
-            border: 1px solid rgba(166,124,0,0.08);
-            transition: border-color 0.2s;
+            background: #FFFFFF;
+            border: 1px solid #EDE8E0;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
         }
-        .amenity-item:hover { border-color: var(--border-gold); color: var(--text-main); }
+        .amenity-item:hover { border-color: var(--border-gold); color: var(--text-main); box-shadow: var(--shadow-md); }
         .amenity-icon { font-size: 1.1rem; flex-shrink: 0; }
 
         /* ── LOCATION ── */
@@ -677,12 +684,13 @@
 
         /* ── SPECIFICATIONS ── */
         .spec-card {
-            background: var(--bg-dark);
-            border: 1px solid rgba(166,124,0,0.15);
+            background: #FFFFFF;
+            border: 1px solid #EDE8E0;
             padding: 28px;
-            transition: border-color 0.25s;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s;
         }
-        .spec-card:hover { border-color: var(--border-gold); }
+        .spec-card:hover { border-color: var(--border-gold); box-shadow: var(--shadow-md); }
 
         /* ── GALLERY ── */
         .gallery { padding: var(--padding-section); background: var(--bg-dark); }
@@ -701,9 +709,10 @@
             margin-top: 40px;
         }
         .why-card {
-            background: var(--bg-panel);
+            background: #FFFFFF;
             padding: 30px;
             text-align: center;
+            box-shadow: var(--shadow-sm);
         }
         .why-card h4 {
             font-family: var(--font-display);
@@ -747,9 +756,11 @@
             margin-top: 50px;
         }
         .test-card {
-            background: var(--bg-dark);
-            border: 1px solid var(--border-gold);
+            background: #FFFFFF;
+            border: 1px solid #EDE8E0;
+            border-top: 3px solid var(--gold);
             padding: 35px;
+            box-shadow: var(--shadow-sm);
         }
         .stars { font-size: 1rem; color: var(--gold-light); margin-bottom: 18px; letter-spacing: 2px; }
         .quote {
@@ -860,7 +871,8 @@
 
         /* ── FOOTER ── */
         footer {
-            background: var(--bg-dark);
+            background: #0E0E10;
+            color: #F0EDE6;
             border-top: 1px solid var(--border-gold);
             padding: 50px 0 30px;
         }
@@ -900,7 +912,7 @@
         .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .footer-col ul li a {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: #9A9590;
             transition: color 0.2s;
         }
         .footer-col ul li a:hover { color: var(--gold-light); }
@@ -913,7 +925,7 @@
         }
         .footer-bottom p {
             font-size: 0.78rem;
-            color: var(--text-muted);
+            color: #9A9590;
         }
 
         /* ── SCROLL REVEAL ── */
@@ -934,8 +946,9 @@
             padding: 40px 20px;
         }
         .modal-box {
-            background: var(--bg-panel);
-            border: 1px solid var(--border-gold);
+            background: #FFFFFF;
+            border: 1px solid #EDE8E0;
+            box-shadow: var(--shadow-md);
             max-width: 780px;
             margin: 0 auto;
             padding: 50px;
@@ -1844,7 +1857,7 @@
                 <div class="footer-brand">
                     <strong>ABHEE</strong>
                     <span>Riviera Royale</span>
-                    <p style="font-size:0.82rem; color:var(--text-muted); line-height:1.7; max-width: 280px;">Authorised channel partner for Abhee Ventures. Exclusive access to Riviera Royale at direct developer pricing. Zero brokerage.</p>
+                    <p style="font-size:0.82rem; color:#9A9590; line-height:1.7; max-width: 280px;">Authorised channel partner for Abhee Ventures. Exclusive access to Riviera Royale at direct developer pricing. Zero brokerage.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>

@@ -1,0 +1,65 @@
+# Clean URLs: 301 every .html URL to its extensionless form (Google indexes the clean URLs).
+# The ! forces the rule even though the .html file exists.
+/index.html  /  301!
+/blog/index.html  /blog/  301!
+/abhee-aaria.html  /abhee-aaria  301!
+/abhee-celestial-city.html  /abhee-celestial-city  301!
+/abhee-codename-new-dimension.html  /abhee-codename-new-dimension  301!
+/abhee-hoskote.html  /abhee-hoskote  301!
+/abhee-rivera.html  /abhee-rivera  301!
+/abhee-kings-court.html  /abhee-kings-court  301!
+/abhee-silicon-shine.html  /abhee-silicon-shine  301!
+/blog/abhee-new-dimension-lifestyle-amenities.html  /blog/abhee-new-dimension-lifestyle-amenities  301!
+/blog/abhee-new-dimension-review-2026.html  /blog/abhee-new-dimension-review-2026  301!
+/blog/pre-launch-apartment-buying-guide-bangalore-2026.html  /blog/pre-launch-apartment-buying-guide-bangalore-2026  301!
+/blog/varthur-sarjapur-road-real-estate-2026.html  /blog/varthur-sarjapur-road-real-estate-2026  301!
+/blogs/2bhk-vs-3bhk-best-investment-bangalore/index.html  /blogs/2bhk-vs-3bhk-best-investment-bangalore/  301!
+/blogs/abhee-codename-new-dimension-buyers-guide/index.html  /blogs/abhee-codename-new-dimension-buyers-guide/  301!
+/blogs/abhee-riviera-royale-hsr-layout-kudlu-investment/index.html  /blogs/abhee-riviera-royale-hsr-layout-kudlu-investment/  301!
+/blogs/bangalore-real-estate-forecast-2026/index.html  /blogs/bangalore-real-estate-forecast-2026/  301!
+/blogs/benefits-living-gated-township/index.html  /blogs/benefits-living-gated-township/  301!
+/blogs/home-loan-guide-real-estate-buyers/index.html  /blogs/home-loan-guide-real-estate-buyers/  301!
+/blogs/rera-guidelines-complete-buyer-checklist/index.html  /blogs/rera-guidelines-complete-buyer-checklist/  301!
+/blogs/rise-of-luxury-apartments-bangalore/index.html  /blogs/rise-of-luxury-apartments-bangalore/  301!
+/blogs/sarjapur-road-future-bangalore-real-estate/index.html  /blogs/sarjapur-road-future-bangalore-real-estate/  301!
+/blogs/scotland-themed-townships-bangalore-luxury-market/index.html  /blogs/scotland-themed-townships-bangalore-luxury-market/  301!
+/blogs/varthur-sarjapur-road-investment-guide-2025/index.html  /blog/varthur-sarjapur-road-real-estate-2026  301!
+/blogs/whitefield-silicon-valley-india/index.html  /blogs/whitefield-silicon-valley-india/  301!
+/disclaimer.html  /disclaimer  301!
+/privacy-policy.html  /privacy-policy  301!
+/success.html  /success  301!
+
+# Old duplicate article: consolidated into the 2026 version (it already canonicalised there)
+/blogs/varthur-sarjapur-road-investment-guide-2025/  /blog/varthur-sarjapur-road-real-estate-2026  301!
+/blogs/varthur-sarjapur-road-investment-guide-2025  /blog/varthur-sarjapur-road-real-estate-2026  301!
+
+# Internal working files that live in the repo but must not be public
+/audit.md  /404  404!
+/technical_audit.md  /404  404!
+/seo_audit_v2.md  /404  404!
+/final_seo_report.md  /404  404!
+/fix_meta.ps1  /404  404!
+/netlify.toml  /404  404!
+
+# Images converted from PNG to WebP
+/assets/aaria_aerial.png  /assets/aaria_aerial.webp  301
+/assets/aaria_clubhouse.png  /assets/aaria_clubhouse.webp  301
+/assets/aaria_forest.png  /assets/aaria_forest.webp  301
+/assets/aaria_hero.png  /assets/aaria_hero.webp  301
+/assets/aaria_pool.png  /assets/aaria_pool.webp  301
+/assets/aaria_specs.png  /assets/aaria_specs.webp  301
+/assets/amenity_golf.png  /assets/amenity_golf.webp  301
+/assets/gallery_aerial_1778307966020.png  /assets/gallery_aerial_1778307966020.webp  301
+/assets/gallery_lake_1778307949250.png  /assets/gallery_lake_1778307949250.webp  301
+/assets/gallery_landscaping_1778307992518.png  /assets/gallery_landscaping_1778307992518.webp  301
+/assets/gallery_lobby_1778307979213.png  /assets/gallery_lobby_1778307979213.webp  301
+/assets/hero_abhee.png  /assets/hero_abhee.webp  301
+/assets/hero_township.png  /assets/hero_township.webp  301
+/assets/nagaraj_reddy.png  /assets/nagaraj_reddy.webp  301
+/assets/overview_clubhouse.png  /assets/overview_clubhouse.webp  301
+/assets/rivera_aerial.png  /assets/rivera_aerial.webp  301
+/assets/rivera_clubhouse.png  /assets/rivera_clubhouse.webp  301
+/assets/rivera_garden.png  /assets/rivera_garden.webp  301
+/assets/rivera_pool.png  /assets/rivera_pool.webp  301
+/assets/rivera_specs.png  /assets/rivera_specs.webp  301
+/assets/specs_quality.png  /assets/specs_quality.webp  301

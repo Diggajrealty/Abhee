@@ -184,7 +184,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: url('../hero_abhee.png') no-repeat center center/cover;
+    background: url('../hero_abhee.webp') no-repeat center center/cover;
     padding-top: 120px;
 }
 
@@ -346,7 +346,7 @@ ul { list-style: none; }
 .featured-spotlight {
     position: relative;
     padding: 120px 0;
-    background: url('whitefield.jpg') no-repeat center center/cover;
+    background: url('../whitefield.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     text-align: center;
 }
